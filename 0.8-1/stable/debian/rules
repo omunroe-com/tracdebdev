@@ -1,12 +1,12 @@
 #!/usr/bin/make -f
 
-DEB_TAR_SRCDIR=$(shell ls trac-* | sed -e 's/\.tar.*//')
-
 include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/tarball.mk
 include /usr/share/cdbs/1/class/python-distutils.mk
 
 DEB_INSTALL_DOCS_ALL=$(filter-out $(DEB_INSTALL_CHANGELOGS_ALL),$(shell for f in README RELEASE UPGRADE AUTHORS THANKS; do if test -s $(DEB_SRCDIR)/$$f; then echo $(DEB_SRCDIR)/$$f; fi; done))
+
+clean::
+	rm trac/__init__.pyc
 
 binary-post-install/trac::
 	chmod 755 debian/trac/usr/lib/python2.3/site-packages/trac/test.py

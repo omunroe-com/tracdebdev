@@ -2,7 +2,7 @@ trac (0.8-1) unstable; urgency=low
 
   * New upstream release (Closes: #282010)
 
- -- Jesus Climent <jesus.climent@hispalinux.es>  Tue, 23 Nov 2004 23:22:33 +0000
+ -- Otavio Salvador <otavio@debian.org>  Mon, 20 Dec 2004 22:49:48 -0200
 
 trac (0.7.1-4) unstable; urgency=low
 
